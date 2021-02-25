@@ -16,15 +16,12 @@ import java.util.NoSuchElementException;
 @RestController
 @RequestMapping(path = "/api/client")
 public class ClientController {
-
-
-
     @Autowired
     private ClientRepository service;
 
     @GetMapping("/clients")
     public List<Client> list() {
-        return service.get();
+        return service.getAllStudents();
     }
 
     @PostMapping("/add")
