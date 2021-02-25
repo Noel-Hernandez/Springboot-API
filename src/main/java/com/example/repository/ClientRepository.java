@@ -14,9 +14,9 @@ public interface ClientRepository extends JpaRepository<Client, Integer> {
     List<Client> getAllStudents();
 
     @Procedure(name = "Client.InsertClient")
-    void insertStudentSP(@Param("Name") String description, @Param("Address") String address,@Param("Password") String password,
+    void insertStudentSP(@Param("Name") String name, @Param("Address") String address,@Param("Password") String password,
                          @Param("Phone") String phone,@Param("Contact") String contact,
-                         @Param("Email") String Email);
+                         @Param("Email") String email);
 
 
 
